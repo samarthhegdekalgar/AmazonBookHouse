@@ -8,6 +8,7 @@ class Book(models.Model):
     price = models.IntegerField(default=0)
     short_description = models.TextField(max_length=140)
     image = models.ImageField()
+    is_deleted = models.BooleanField(default=False, null=True)
 
     def __str__(self):
         return self.name
