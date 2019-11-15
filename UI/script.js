@@ -15,14 +15,14 @@ function getBookData() {
 
 function displayInfo() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
-
+        
         if (httpRequest.status === 200) {
-
+            
             let bookData = JSON.parse(httpRequest.responseText)
             let idBookData = document.getElementById('content');
-
+            
             for (let i = 0; i < bookData.length; i++) {
-
+                
                 let bookDataObj = bookData[i];
 
                 idBookData.insertAdjacentHTML('beforeend',
@@ -36,7 +36,7 @@ function displayInfo() {
                  onclick="cartmodal()">Add To Cart</button></div></div></div>'
                 );
             }
-        }
+        } 
         else {
             alert('Error!!!');
         }
@@ -48,7 +48,7 @@ function createUser(){
     email = document.getElementById('email').value;
     password = document.getElementById('password').value;
     re_password = document.getElementById('re_password').value;
-
+    
     if ( password != re_password){
         alert('Password does not match!!!');
     }
