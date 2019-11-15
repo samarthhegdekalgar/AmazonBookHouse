@@ -1,10 +1,25 @@
 <html>
+
 <head>
     <link href='style.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
+
 </head>
+
 <body>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction(id) {
+            var popup = document.getElementById(id);
+            popup.classList.toggle("show");
+        }
+
+        function cartmodal() {
+            document.getElementById('id03').style.display = 'block'
+
+        }
+    </script>
 
     <div class='header'>
         <div class='header-left'>
@@ -21,26 +36,27 @@
                     </div>
                 </label>
                 <div class='right'>
-                <div class='menu'>
-                    <div class="home">
-                        Home
+                    <div class='menu'>
+                        <div class="home">
+                            Home
+                        </div>
+                        <div class="contact">
+                            <a href="#company-details">Contact</a>
+                        </div>
+                        <div class="About">
+                            <a href="#company-details">About</a>
+                        </div>
+                        <div class="sign" onclick="document.getElementById('id01').style.display='block'">
+                            <span> Login</span>
+                        </div>
+                        <div class="sign" onclick="document.getElementById('id02').style.display='block'">
+                            <span> Register</span>
+                        </div>
+                        <div class="cart">
+                            <img src='icons8-shopping-cart-24.png'
+                                onclick="document.getElementById('id03').style.display='block'">
+                        </div>
                     </div>
-                    <div class="contact">
-                        <a href="#company-details">Contact</a>
-                    </div>
-                    <div class="About">
-                        <a href="#company-details">About</a>
-                    </div>
-                    <div class="sign" onclick="document.getElementById('id01').style.display='block'" >
-                       <span> Login</span>
-                    </div>
-                    <div class="sign" onclick="document.getElementById('id02').style.display='block'" >
-                        <span> Register</span>
-                     </div>
-                    <div class="cart">
-                        <img src='icons8-shopping-cart-24.png' onclick="document.getElementById('id03').style.display='block'">
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -48,113 +64,117 @@
     <div id="id01" class="modal">
 
         <form class="modal-content animate" action="#" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Login" class="avatar">
-          </div>
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img_avatar2.png" alt="Login" class="avatar">
+            </div>
 
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" class = "loginInput" placeholder="Enter Username" name="uname" required>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" class="loginInput" placeholder="Enter Username" name="uname" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit" >Login</button>
+                <button type="submit">Login</button>
 
-          </div>
+            </div>
 
 
         </form>
-      </div>
-      <div id="id02" class="modal">
+    </div>
+    <div id="id02" class="modal">
 
         <form class="modal-content animate" action="#">
             <div class="imgcontainer">
-                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
 
-                  </div>
-            <div class="container">
-              <h1>Sign Up</h1>
-              <p>Please fill in this form to create an account.</p>
-              <hr>
-              <label for="email"><b>Email</b></label>
-              <input type="text" class = "loginInput" placeholder="Enter Email" name="email" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-
-              <label for="psw-repeat"><b>Repeat Password</b></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-              <div class="clearfix">
-
-                <button type="submit" class="signupbtn">Sign Up</button>
-              </div>
             </div>
-          </form>
-      </div>
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="loginInput" placeholder="Enter Email" name="email" required>
 
-      <div id="id03" class="modal">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <form class="modal-content animate" action="#">
-                <div class="imgcontainer">
-                        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-                      </div>
-                <div class="container">
-                  <h1>Cart</h1>
+                <div class="clearfix">
 
-                  <hr>
-                 <div class="cartBox">
-                 <div>
-                     Book: Quantum Physics
-
-                 </div>
-                 <div>
-                    Order Date:14-nov-2019
-                 </div>
-                 <div>
-                     Price:15$
-                 </div>
+                    <button type="submit" class="signupbtn">Sign Up</button>
                 </div>
-                 <div class = "totalSumOfCart">
-                     Total:15$
-                 </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="id03" class="modal">
+
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+            <div class="container">
+                <h1>Cart</h1>
+
+                <hr>
+                <div class="cartBox">
+                    <div>
+                        Book: Quantum Physics
+
+                    </div>
+                    <div>
+                        Order Date:14-nov-2019
+                    </div>
+                    <div>
+                        Price:15$
+                    </div>
+                </div>
+                <div class="totalSumOfCart">
+                    Total:15$
+                </div>
 
 
-                  <div class="clearfix">
+                <div class="clearfix">
 
                     <button type="submit" class="signupbtn">Buy Now</button>
-                  </div>
                 </div>
-              </form>
-          </div>
+            </div>
+        </form>
+    </div>
 
-<!---------------------------------------------->
-        <div id="id03" class="modal">
-  <form class="modal-content animate" action="#">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <!---------------------------------------------->
+    <div id="id03" class="modal">
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <h1>Book Name</h1>
+                <hr>
+                <div class="cartBox">
+                    <div>
+                        Book description
+                    </div>
+                    <div>
+                        Price:15$
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Add to Cart</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="container">
-      <h1>Book Name</h1>
-      <hr>
-      <div class="cartBox">
-        <div>
-          Book description
-        </div>
-        <div>
-          Price:15$
-      </div>
-    </div>
-    <div class="clearfix">
-      <button type="submit" class="signupbtn">Add to Cart</button>
-    </div>
-  </div>
-  </form>
-  </div>
- <!----------------------------------------------->
+    <!----------------------------------------------->
 
 
 
@@ -162,270 +182,379 @@
 
 
     <div id="content">
-            <div id="content-one">
-                <div id="content-heading">
-                    <div id="content-heading-detail">
-                    </div>
-
-                    <div id="content-explore">
-
-                    </div>
+        <div id="content-one">
+            <div id="content-heading">
+                <div id="content-heading-detail">
                 </div>
 
-                <div id="content-details">
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(java.jpg);">
-                        </div>
+                <div id="content-explore">
 
-                        <div id="content-details-explore-price">
-                            <span>$5 per book</span>
-                            <image></image>
-                            <span>4.8</span>
-                        </div>
-
-
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$6 per book</span>
-                            <image></image>
-                            <span>4.4</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$5 per book</span>
-                            <span >4.7</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(java.jpg);">
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$7 per book</span>
-                            <image></image>
-                            <span>4.9</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-
-                    </div>
                 </div>
+            </div>
 
-            </div> <!--content-one -->
-
-
-            <div id="content-two">
-                <div id="content-heading">
-                    <div id="content-explore">
-                        <a href="#">Show all (193)</a>
-                    </div>
-                </div>
-
-                <div id="content-details">
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$4 per book </span>
-                            <image></image>
-                            <span>4.8</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
+            <div id="content-details">
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(java.jpg);">
                     </div>
 
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
+                    <div class="popup" onclick="myFunction('myPopup0')">
+                        <b> Python</b>
 
-                        <div id="content-details-explore-price">
-                            <span>$14 per book </span>
-                            <image></image>
-                            <span>4.7</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$11 per book</span>
-                            <image></image>
-                            <span>5.0</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$15 per book</span>
-                            <image></image>
-                            <span>4.8</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--content-two -->
-
-            <div id="content-three">
-                <div id="content-heading">
-                    <div id="content-explore">
-                        <a href="#">Show all (193)</a>
-                    </div>
-                </div>
-
-                <div id="content-details">
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$10 per book</span>
-                            <image></image>
-                            <span>4.8</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$15 per book</span>
-                            <image></image>
-                            <span>4.7</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$9 per book</span>
-                            <image></image>
-                            <span>5.0</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-
-                    <div id="content-details-explore">
-                        <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
-                            <image></image>
-                        </div>
-
-                        <div id="content-details-explore-price">
-                            <span>$8 per book</span>
-                            <image></image>
-                            <span>4.8</span>
-                        </div>
-
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--content-three -->
-
-             <div id="company-details">
-                <div id="company-details-first">
-                    <div id="company-details-setting">
-                        <div id="company-details-setting-logo">
-                            <img src='amazon.png'>
-                        </div>
-                        <div id="company-details-setting-language">
-                                <label>Email:</label><input type="text">
-                        </div>
-                        <div id="company-details-setting-language">
-                            <label>Text:</label><textarea rows="10" cols="50"></textarea>
-                        </div>
-                        <div class='left-text'>
-                            <div id="company-details-setting-language">
-                                <button type="submit" value="Submit">Submit</button>
+                        <div class="popuptext" id="myPopup0">
+                            <div id="content-details-explore-price">
+                                <span>$3 per book</span>
+                                <image></image>
+                                <span>4.0</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
 
-                    <div id="company-details-second">
-                        <div id="company-details-second-aboutus">
-                            <span id="company-details-second-heading" href="#">About us:</span>
-                            <p>We're a company of builders. It's our job to make bold bets,<br>
-                                and we get our energy from inventing on behalf of customers.</p>
-                            <div class='follow1'>
-                                <div id="arrenge-items">
-                                    <span class='text'>Follow Us :</span>
-                                        <img src='fill-2-3-x.png'></img>
-                                        <img src='fill-8-3-x.png'></img>
-                                        <img src='group-3-3-x.png'></img>
                         </div>
                     </div>
 
-                </div>
-                                </div>
-                             </div>
 
-             </div>
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                    </div>
+
+
+
+
+
+                    <div class="popup" onclick="myFunction('myPopup')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup">
+                            <div id="content-details-explore-price">
+                                <span>$6 per book</span>
+                                <image></image>
+                                <span>4.4</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup2')">
+                        <b> Python</b>
+
+
+                        <div class="popuptext" id="myPopup2">
+                            <div id="content-details-explore-price">
+                                <span>$5 per book</span>
+                                <image></image>
+                                <span>4.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(java.jpg);">
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup3')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup3">
+                            <div id="content-details-explore-price">
+                                <span>$7 per book</span>
+                                <image></image>
+                                <span>4.9</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <!--content-one -->
+
+
+        <div id="content-two">
+            <div id="content-heading">
+                <div id="content-explore">
+                    <a href="#">Show all (193)</a>
+                </div>
+            </div>
+
+            <div id="content-details">
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup4')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup4">
+                            <div id="content-details-explore-price">
+                                <span>$4 per book</span>
+                                <image></image>
+                                <span>4.8</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup5')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup5">
+                            <div id="content-details-explore-price">
+                                <span>$14 per book</span>
+                                <image></image>
+                                <span>4.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+                    <div class="popup" onclick="myFunction('myPopup6')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup6">
+                            <div id="content-details-explore-price">
+                                <span>$11 per book</span>
+                                <image></image>
+                                <span>5.0</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+                    <div class="popup" onclick="myFunction('myPopup7')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup7">
+                            <div id="content-details-explore-price">
+                                <span>$5 per book</span>
+                                <image></image>
+                                <span>4.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--content-two -->
+
+        <div id="content-three">
+            <div id="content-heading">
+                <div id="content-explore">
+                    <a href="#">Show all (193)</a>
+                </div>
+            </div>
+
+            <div id="content-details">
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup8')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup8">
+                            <div id="content-details-explore-price">
+                                <span>$10 per book</span>
+                                <image></image>
+                                <span>4.8</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup10')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup10">
+                            <div id="content-details-explore-price">
+                                <span>$15 per book</span>
+                                <image></image>
+                                <span>3.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup11')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup11">
+                            <div id="content-details-explore-price">
+                                <span>$9 per book</span>
+                                <image></image>
+                                <span>4.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-details-explore">
+                    <div id="content-detaials-explore-img" style="background-image:url(python.jpg);">
+                        <image></image>
+                    </div>
+
+                    <div class="popup" onclick="myFunction('myPopup12')">
+                        <b> Python</b>
+
+                        <div class="popuptext" id="myPopup12">
+                            <div id="content-details-explore-price">
+                                <span>$25 per book</span>
+                                <image></image>
+                                <span>4.7</span>
+                            </div>
+                            <div id="content-details-explore-heading">
+                                <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
+                            </div>
+                            <button class="statusButton" onclick="cartmodal()">Add To Cart</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--content-three -->
+
+        <div id="company-details">
+            <div id="company-details-first">
+                <div id="company-details-setting">
+                    <div id="company-details-setting-logo">
+                        <img src='amazon.png'>
+                    </div>
+                    <div id="company-details-setting-language">
+                        <label>Email:</label><input type="text">
+                    </div>
+                    <div id="company-details-setting-language">
+                        <label>Text:</label><textarea rows="10" cols="50"></textarea>
+                    </div>
+                    <div class='left-text'>
+                        <div id="company-details-setting-language">
+                            <button type="submit" value="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="company-details-second">
+                <div id="company-details-second-aboutus">
+                    <span id="company-details-second-heading" href="#">About us:</span>
+                    <p>We're a company of builders. It's our job to make bold bets,<br>
+                        and we get our energy from inventing on behalf of customers.</p>
+                    <div class='follow1'>
+                        <div id="arrenge-items">
+                            <span class='text'>Follow Us :</span>
+                            <img src='fill-2-3-x.png'></img>
+                            <img src='fill-8-3-x.png'></img>
+                            <img src='group-3-3-x.png'></img>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
-
-

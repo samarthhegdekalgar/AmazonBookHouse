@@ -229,6 +229,7 @@ body {
 }
 
 #content-detaials-explore-img {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     width:100%;
@@ -239,6 +240,7 @@ body {
 }
 
 #content-details-explore-price{
+    padding:9px;
     display: flex;
     flex-direction: row;
     justify-content:space-between ;
@@ -249,13 +251,14 @@ body {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #596172;
+    color: black;
     background:url(fire.png) no-repeat;
     background-size: contain;
     background-position-x:226px ;
 }
 
 #content-details-explore-heading{
+    padding:9px;
     display: flex;
     flex-direction: row;
     width:240px;
@@ -267,7 +270,7 @@ body {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #2b313d;
+    color:black;
 }
 #content-two {
     display: flex;
@@ -333,8 +336,8 @@ body {
     display: flex;
     flex-direction: row;
     width:310px;
-    /*height: 45px;*/
-    /*margin-left: 60px;*/
+    /height: 45px;/
+    /margin-left: 60px;/
     margin-top: 30px;
     margin-left:60px;
 }
@@ -581,12 +584,13 @@ body {
     .cancelbtn {
        width: 100%;
     }
+}
 
 .follow1 {
     display: flex;
     flex-direction: row;
     margin-top: 57.4px;
-    background-color: blue;
+
 
 }
 
@@ -624,3 +628,81 @@ flex-direction:row;
 
 }
 
+
+.popup {
+    position: relative;
+    text-align: center;
+    margin-top:7%;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:black;
+  }
+
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 260px;
+    padding:5%;
+    background-color: #00acc1;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    box-shadow:0 14px 26px -12px rgba(0, 172, 193, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 172, 193, 0.2);
+
+
+    z-index: 1;
+        left: 50%;
+    margin-left: -80px;
+  }
+
+  /* Popup arrow */
+  /* .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } */
+
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  .statusButton{
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    padding:5px 30px 5px 30px;
+    box-shadow:0 2px 2px 0 rgba(0, 172, 193, 0.14), 0 3px 1px -2px rgba(0, 172, 193, 0.2), 0 1px 5px 0 rgba(0, 172, 193, 0.12);
+    border-radius:50px;
+    cursor: pointer;
+    border: "none";
+
+    background-color:#346b72;
+
+
+  }
+
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
