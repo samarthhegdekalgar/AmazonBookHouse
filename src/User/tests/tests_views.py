@@ -3,15 +3,14 @@ from django.urls import reverse
 from User.models import User
 
 
-
 class TestViews(TestCase):
 
     def setUp(self):
         self.client = Client()
         self.list_url = reverse('user-list')
         self.create_user = reverse('create-user')
-        self.delete_user = reverse('delete-user', args=[3])
-        self.update_user = reverse('update-user', args=[4])
+        self.delete_user = reverse('delete-user', args=[4])
+        self.update_user = reverse('update-user', args=[5])
 
     def test_user_list_GET(self):
         response = self.client.get(self.list_url)
