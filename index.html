@@ -1,10 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
 
+<head>
+    <link href='style.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction(id) {
+            var popup = document.getElementById(id);
+            popup.classList.toggle("show");
+        }
+
+        function cartmodal() {
+            document.getElementById('id03').style.display = 'block'
+
+        }
+    </script>
+
+    <div class='header'>
+        <div class='header-left'>
+            <div class='left'>
+                <div class='logo-img'>
+                    <img src='amazon.png'>
+                </div>
+                <label class='search1'>
+                    <div class='search-bar'>
+                        <input id="search" type="text" placeholder="Search for book">
+                    </div>
+                    <div class='search-img'>
+                        <img src='search-icon.png'>
+                    </div>
+                </label>
+                <div class='right'>
+                    <div class='menu'>
+                        <div class="home">
+                            Home
+                        </div>
+                        <div class="contact">
+                            <a href="#company-details">Contact</a>
+                        </div>
+                        <div class="About">
+                            <a href="#company-details">About</a>
+                        </div>
+                        <div class="sign" onclick="document.getElementById('id01').style.display='block'">
+                            <span> Login</span>
+                        </div>
+                        <div class="sign" onclick="document.getElementById('id02').style.display='block'">
+                            <span> Register</span>
+                        </div>
+                        <div class="cart">
+                            <img src='icons8-shopping-cart-24.png'
+                                onclick="document.getElementById('id03').style.display='block'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="#" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img_avatar2.png" alt="Login" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" class="loginInput" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+
+            </div>
+
+
+        </form>
+    </div>
+    <div id="id02" class="modal">
+
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Name</b></label>
+                <input type="text" class="loginInput" id="username" placeholder="Enter Name" name="email" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="loginInput" id="email" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" id="re_password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <div class="clearfix">
+
+                    <button type="submit" class="signupbtn" id="signup">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="id03" class="modal">
+
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+            <div class="container">
+                <h1>Cart</h1>
+
+                <hr>
+                <div class="cartBox">
+                    <div>
+                        Book: Quantum Physics
+
+                    </div>
+                    <div>
+                        Order Date:14-nov-2019
+                    </div>
+                    <div>
+                        Price:15$
+                    </div>
+                </div>
+                <div class="totalSumOfCart">
+                    Total:15$
+                </div>
+
+
+                <div class="clearfix">
+
+                    <button type="submit" class="signupbtn">Buy Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="content">
+
+
+
+    </div>
+
+        <div id="company-details">
+            <div id="company-details-first">
+                <div id="company-details-setting">
+                    <div id="company-details-setting-logo">
+                        <img src='amazon.png'>
+                    </div>
+                    <div id="company-details-setting-language">
+                        <label>Email:</label><input type="text">
+                    </div>
+                    <div id="company-details-setting-language">
+                        <label>Text:</label><textarea rows="10" cols="50"></textarea>
+                    </div>
+                    <div class='left-text'>
+                        <div id="company-details-setting-language">
+                            <button type="submit" value="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="company-details-second">
+                <div id="company-details-second-aboutus">
+                    <span id="company-details-second-heading" href="#">About us:</span>
+                    <p>We're a company of builders. It's our job to make bold bets,<br>
+                        and we get our energy from inventing on behalf of customers.</p>
+                    <div class='follow1'>
+                        <div id="arrenge-items">
+                            <span class='text'>Follow Us :</span>
+                            <img src='fill-2-3-x.png'></img>
+                            <img src='fill-8-3-x.png'></img>
+                            <img src='group-3-3-x.png'></img>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

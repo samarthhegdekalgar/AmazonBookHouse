@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from .serializer import UserSerializer, UserUpdateSerializer
 from .models import User
-from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView, RetrieveAPIView
 
 
 class UserListAPIView(ListAPIView):
@@ -36,3 +36,8 @@ class UserDestroyAPIView(DestroyAPIView):
         instance.is_deleted = True
         instance.save()
 
+
+class UserRetrieveAPIView(RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserUpdateSerializer
+    lookup_field = 'name'

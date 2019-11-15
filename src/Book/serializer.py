@@ -11,5 +11,5 @@ class BookListSerializer(serializers.ModelSerializer):
 class BookUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ('pk', 'name', 'author', 'category', 'price', 'short_description', 'image')
+        fields = ('pk', 'name', 'author', 'category', 'price', 'short_description', 'image', 'is_deleted')
 

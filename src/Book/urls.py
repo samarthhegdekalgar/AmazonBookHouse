@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import BookListAPIView, BookCreateAPIView, BookUpdateAPIView, BookDestroyAPIView, BookSearchAPIView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', BookListAPIView.as_view(), name='book-list'),
@@ -8,3 +10,5 @@ urlpatterns = [
     path('delete/<int:pk>', BookDestroyAPIView.as_view(), name='delete-book'),
     path('search/', BookSearchAPIView.as_view(), name='search-book')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
