@@ -6,7 +6,7 @@ from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, D
 
 
 class OrderListAPIView(ListAPIView):
-    queryset = Order.objects.all().filter(is_deleted=False)
+    queryset = Order.objects.all().filter(is_cancelled=False)
     serializer_class = OrderSerializer
 
 
