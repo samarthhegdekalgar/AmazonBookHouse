@@ -2,13 +2,15 @@
 <head>
     <link href='style.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+
     <div class='header'>
         <div class='header-left'>
             <div class='left'>
                 <div class='logo-img'>
-                    <img src='amazon i.png'>
+                    <img src='amazon.png'>
                 </div>
                 <label class='search1'>
                     <div class='search-bar'>
@@ -29,19 +31,111 @@
                     <div class="About">
                         About
                     </div>
-                    <div class="sign">
-                        Sign in
+                    <div class="sign" onclick="document.getElementById('id01').style.display='block'" >
+                       <span> Login</span>
                     </div>
+                    <div class="sign" onclick="document.getElementById('id02').style.display='block'" >
+                        <span> Register</span>
+                     </div>
                     <div class="cart">
-                        <img src='icons8-shopping-cart-24.png'>
+                        <img src='icons8-shopping-cart-24.png' onclick="document.getElementById('id03').style.display='block'">
                     </div>
                 </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="id01" class="modal">
 
-    <!--copied from git hub samarth -->
+        <form class="modal-content animate" action="#" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" class = "loginInput" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" >Login</button>
+
+          </div>
+
+
+        </form>
+      </div>
+      <div id="id02" class="modal">
+
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                  </div>
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input type="text" class = "loginInput" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+
+
+              <div class="clearfix">
+
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+      </div>
+
+      <div id="id03" class="modal">
+
+            <form class="modal-content animate" action="#">
+                <div class="imgcontainer">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                      </div>
+                <div class="container">
+                  <h1>Cart</h1>
+
+                  <hr>
+                 <div class="cartBox">
+                 <div>
+                     Book: Quantum Physics
+
+                 </div>
+                 <div>
+                    Order Date:14-nov-2019
+                 </div>
+                 <div>
+                     Price:15$
+                 </div>
+                </div>
+                 <div class = "totalSumOfCart">
+                     Total:15$
+                 </div>
+
+
+                  <div class="clearfix">
+
+                    <button type="submit" class="signupbtn">Buy Now</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+
+
+
     <div id="content">
             <div id="content-one">
                 <div id="content-heading">
