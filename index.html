@@ -26,10 +26,10 @@
                         Home
                     </div>
                     <div class="contact">
-                        Contact
+                        <a href="#company-details">Contact</a>
                     </div>
                     <div class="About">
-                        About
+                        <a href="#company-details">About</a>
                     </div>
                     <div class="sign" onclick="document.getElementById('id01').style.display='block'" >
                        <span> Login</span>
@@ -87,9 +87,6 @@
               <label for="psw-repeat"><b>Repeat Password</b></label>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-
-
-
               <div class="clearfix">
 
                 <button type="submit" class="signupbtn">Sign Up</button>
@@ -134,6 +131,34 @@
               </form>
           </div>
 
+<!---------------------------------------------->
+        <div id="id03" class="modal">
+  <form class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <h1>Book Name</h1>
+      <hr>
+      <div class="cartBox">
+        <div>
+          Book description
+        </div>
+        <div>
+          Price:15$
+      </div>
+    </div>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Add to Cart</button>
+    </div>
+  </div>
+  </form>
+  </div>
+ <!----------------------------------------------->
+
+
+
+
 
 
     <div id="content">
@@ -158,9 +183,6 @@
                             <span>4.8</span>
                         </div>
 
-                        <div id="content-details-explore-heading">
-                            <span>Describe your book in simple, straightforward, and consumer-friendly terms.</span>
-                        </div>
 
                     </div>
 
@@ -388,21 +410,22 @@
                         <div id="company-details-second-aboutus">
                             <span id="company-details-second-heading" href="#">About us:</span>
                             <p>We're a company of builders. It's our job to make bold bets,<br>
-                                    and we get our energy from inventing on behalf of customers.</p>
+                                and we get our energy from inventing on behalf of customers.</p>
                             <div class='follow1'>
                                 <div id="arrenge-items">
                                     <span class='text'>Follow Us :</span>
                                         <img src='fill-2-3-x.png'></img>
                                         <img src='fill-8-3-x.png'></img>
                                         <img src='group-3-3-x.png'></img>
-                                </div>
-                             </div>
                         </div>
                     </div>
 
                 </div>
+                                </div>
+                             </div>
 
              </div>
-
 </body>
 </html>
+
+
