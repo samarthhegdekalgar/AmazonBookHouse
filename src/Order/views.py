@@ -36,3 +36,17 @@ class OrderDestroyAPIView(DestroyAPIView):
         instance.is_cancelled = True
         instance.save()
 
+
+'''
+The Api view created for OrderApp
+Crud Operations has been performed 
+
+class OrderListAPIView is for get data 
+
+class OrderCreateAPIView(CreateAPIView): In this method 'create function' has been created for 
+                                        creating the data
+
+class OrderDestroyAPIView(DestroyAPIView): In this a destroy method has been created to delete the order details
+
+
+'''

@@ -8,18 +8,7 @@
 </head>
 
 <body>
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction(id) {
-            var popup = document.getElementById(id);
-            popup.classList.toggle("show");
-        }
 
-        function cartmodal() {
-            document.getElementById('id03').style.display = 'block'
-
-        }
-    </script>
 
     <div class='header'>
         <div class='header-left'>
@@ -53,8 +42,7 @@
                             <span> Register</span>
                         </div>
                         <div class="cart">
-                            <img src='icons8-shopping-cart-24.png'
-                                onclick="document.getElementById('id03').style.display='block'">
+                            <img src='icons8-shopping-cart-24.png' onclick="document.getElementById('id03').style.display='block'">
                         </div>
                     </div>
                 </div>
@@ -63,21 +51,21 @@
     </div>
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="#" method="post">
+        <form class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <img src="img_avatar2.png" alt="Login" class="avatar">
             </div>
 
             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" class="loginInput" placeholder="Enter Username" name="uname" required>
+                <label for="uname"><b>Email</b></label>
+                <input type="text" id='loginemail' class="loginInput" placeholder="Enter Email" name="uname" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" id='loginpassword' placeholder="Enter Password" name="psw" required>
 
-                <button type="submit">Login</button>
+                <button class="signupbtn" type="reset">Clear</button>
+                <button type="button" id='login'>Login</button>
 
             </div>
 
@@ -86,10 +74,9 @@
     </div>
     <div id="id02" class="modal">
 
-        <form class="modal-content animate" action="#">
+        <form class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 
             </div>
             <div class="container">
@@ -97,20 +84,20 @@
                 <p>Please fill in this form to create an account.</p>
                 <hr>
                 <label for="email"><b>Name</b></label>
-                <input type="text" class="loginInput" id="username" placeholder="Enter Name" name="email" required>
+                <input type="text" class="loginInput" id="registerusername" placeholder="Enter Name" name="email" required>
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" class="loginInput" id="email" placeholder="Enter Email" name="email" required>
+                <input type="text" class="loginInput" id="registeremail" placeholder="Enter Email" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" id="registerpassword" placeholder="Enter Password" name="psw" required>
 
                 <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" id="re_password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="password" id="registerre_password" placeholder="Repeat Password" name="psw-repeat" required>
 
                 <div class="clearfix">
-
-                    <button type="submit" class="signupbtn" id="signup">Sign Up</button>
+                    <button class="signupbtn" type="reset" id='resetbtn'>Clear</button>
+                    <button class="signupbtn" type="button" id="signup">Sign Up</button>
                 </div>
             </div>
         </form>
@@ -118,10 +105,9 @@
 
     <div id="id03" class="modal">
 
-        <form class="modal-content animate" action="#">
+        <div class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id03').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
 
             </div>
             <div class="container">
@@ -147,28 +133,32 @@
 
                 <div class="clearfix">
 
-                    <button type="submit" class="signupbtn">Buy Now</button>
+                    <button class="signupbtn">Buy Now</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 
 
     <div id="content">
 
 
-                
+
     </div>
 
-        <div id="company-details">
-            <div id="company-details-first">
-                <div id="company-details-setting">
-                    <div id="company-details-setting-logo">
-                        <img src='amazon.png'>
-                    </div>
-                    <div id="company-details-setting-language">
-                        <label>Email:</label><input type="text">
-                    </div>
+    <div id="company-details">
+        <div id="company-details-first">
+            <div id="company-details-setting">
+                <div id="company-details-setting-logo">
+                    <img src='amazon.png'>
+                </div>
+                <div id="company-details-setting-language">
+                    <label>Email:</label><input type="text">
+                </div>
+                <div id="company-details-setting-language">
+                    <label>Text:</label><textarea rows="10" cols="50"></textarea>
+                </div>
+                <div class='left-text'>
                     <div id="company-details-setting-language">
                         <label>Text:</label><textarea rows="10" cols="50"></textarea>
                     </div>
@@ -176,10 +166,11 @@
                         <div id="company-details-setting-language">
                             <button type="submit" value="Submit" style="margin-left:17px">Submit</button>
                         </div>
-                    </div>
+                        <button type="submit" value="Submit">Submit</button>
+                  </div>
                 </div>
             </div>
-
+        </div>
             <div id="company-details-second">
                 <div id="company-details-second-aboutus">
                     <span id="company-details-second-heading" href="#">About us:</span>
@@ -192,14 +183,37 @@
                             <img src='fill-8-3-x.png'style="margin-left:10px;"></img>
                             <img src='group-3-3-x.png'style="margin-left:10px;"></img>
                         </div>
-                    </div>
-
+        <div id="company-details-second">
+            <div id="company-details-second-aboutus">
+                <span id="company-details-second-heading" href="#">About us:</span>
+                <p>We're a company of builders. It's our job to make bold bets,<br> and we get our energy from inventing on behalf of customers.</p>
+                <div class='follow1'>
+                    <div id="arrenge-items">
+                        <span class='text'>Follow Us :</span>
+                        <img src='fill-2-3-x.png'></img>
+                        <img src='fill-8-3-x.png'></img>
+                        <img src='group-3-3-x.png'></img>
                 </div>
+                </div>
+
             </div>
         </div>
+    </div>
 
     </div>
     <script src="script.js"></script>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction(id) {
+            var popup = document.getElementById(id);
+            popup.classList.toggle("show");
+        }
+
+        function cartmodal() {
+            document.getElementById('id03').style.display = 'block'
+
+        }
+    </script>
 </body>
 
 </html>

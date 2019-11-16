@@ -18,3 +18,4 @@ class OrderUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ('pk', 'user_name', 'book_name', 'total_price', 'is_cancelled')
+
