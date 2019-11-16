@@ -16,3 +16,8 @@ class Order(models.Model):
         return self.total_price
 
 
+'''
+The Order class contains details of book selected by the consumer and added to the cart
+    :__str__ function returns the string value of user
+    : total_price_calculate returns the total price of the book added in the cart
+'''
