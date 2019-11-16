@@ -341,12 +341,16 @@ body {
     /margin-left: 60px;/
     margin-top: 30px;
     margin-left:60px;
+    margin-top: 10px;
 }
 
 #company-details-setting-language label, input{
     font-size: 20px;
     font-weight:400;
     width:100%;
+    border-radius:2px;
+    margin-right:5px;
+    margin-left:3px;
 }
 
 #company-details-setting-language textarea{
@@ -425,6 +429,8 @@ body {
     line-height: normal;
     letter-spacing: normal;
     color: black;
+    font-weight:900;
+    margin-top:40px;
 }
 
 .arrow-down {
@@ -599,11 +605,11 @@ body {
     display:flex;
     flex-direction:row;
     justify-content:center;
-    font-size: 13.2px;
-    color: #d6dbe7;
-    font-weight: 500;
+    font-size: 26px;
+    color: black;
+    font-weight: 600;
     letter-spacing: 0.1px;
-
+    margin-left:5px;
 }
 
 .facebook {
@@ -707,5 +713,7 @@ flex-direction:row;
   
   @keyframes fadeIn {
     from {opacity: 0;}
-    to {opacity:1 ;}
+    to {opacity: 1;}
   }
+
+
